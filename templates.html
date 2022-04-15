@@ -43,22 +43,25 @@
   <h2>Jobs</h2>
 
   <h2>Reviews</h2>
-    {# TODO: Remove comment and add for loop
-      {% %}
-    #}
+      {% for in %}
     <div class="box">
       <article class="media">
         <div class="media-left">
+          {% for _ in range(0, review['rating']): %}
+            <span class="fa fa-star checked"></span>
+          {% endfor %}
         </div>
         <div class="media-content">
           <div class="content">
+            <strong>title</strong>
+            <small>status</small>
+            <small>date</small>
+            review
           </div>
         </div>
       </article>
     </div>
-    {# TODO: Remove comment and end for loop
-      {% %}
-    #}
+      {% endfor %}
   <div class="columns">
     <div class="column">
       <a class="button is-info is-pulled-right">Create Review</a>
